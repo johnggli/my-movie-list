@@ -32,6 +32,16 @@ export const Add = () => {
               value={query}
               onChange={onChange} />
           </div>
+
+          {results.length > 0 && (
+            <ul className="results">
+              {results.map(movie => (
+                <li>
+                  {movie.title}
+                </li>
+              ))}
+            </ul>
+          )}
         </div>
       </div>
     </div>
